@@ -67,7 +67,7 @@ const MapIntegrationButton = () => {
           <div className={classes.map}>
             <iframe
               title="Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158855.38334309723!2d-122.41941506657788!3d37.77492959045952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sca!4v1627502816804!5m2!1sen!2sca"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6487908.742605282!2d3.3350031426917077!3d9.072264384017143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b2b1e160abf%3A0xd19113b501200733!2sNigeria!5e0!3m2!1sen!2sus!4v1627631115949!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}
