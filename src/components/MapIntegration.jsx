@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor:'black',
     position:'fixed',
     margin:'0 45%',
-    bottom:50,
+    bottom:45,
     color:'white',
     fontSize:12,
     fontWeight: 400,
