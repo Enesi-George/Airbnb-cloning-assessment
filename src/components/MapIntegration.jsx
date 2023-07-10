@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center', //justify the content
   },
   button:{
     backgroundColor:'black',
