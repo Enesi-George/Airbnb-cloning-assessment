@@ -1,0 +1,13 @@
+
+.link{
+    text-decoration: none;
+    transition: 0.1s;
+    box-sizing: border-box;
+
+}
+.link:hover{
+    border-bottom: 2px solid grey;
+}
+.link:active{
+    border-bottom: 2px solid black;
+}
