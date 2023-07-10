@@ -158,7 +158,7 @@ const ResponsiveAppBar = () => {
             display: { xs: 'none', md: 'flex' }, 
             justifyContent:'center',
             mx:'auto',
-            width: '300px',
+            width: '400px',
             }}>
            
               <Box
@@ -176,7 +176,7 @@ const ResponsiveAppBar = () => {
               >
                 <Button sx={{
                   textTransform: 'capitalize', 
-                  fontSize: 11, 
+                  fontSize: 14, 
                   color:'text.primary',
                   ":hover": { backgroundColor:'transparent' }                
               }}>
@@ -189,7 +189,7 @@ const ResponsiveAppBar = () => {
                   borderBottom:0,
                   textTransform: 'capitalize', 
                   color:'text.primary', 
-                  fontSize: 11, 
+                  fontSize: 14, 
                   padding:'0px 10px', 
                   margin:'9px 0px',
                   ":hover": { backgroundColor:'transparent' }                
@@ -198,7 +198,7 @@ const ResponsiveAppBar = () => {
                     </Button>
                 <Button sx={{
                   textTransform: 'capitalize', 
-                  fontSize: 11, 
+                  fontSize: 14, 
                   color:'text.disabled',
                   ":hover": { backgroundColor:'transparent' }                
                   }}>
@@ -209,7 +209,7 @@ const ResponsiveAppBar = () => {
                 sx={{
                   display: 'flex',
                   justifyContent: 'center',
-                  margin:'6px -3px 0px 0px',
+                  margin:'7px -3px 0px 0px',
                   width: '25px',
                   height: '24px',
                   borderRadius:'51%',
@@ -236,7 +236,7 @@ const ResponsiveAppBar = () => {
             sx={{
               color:'text.primary', 
               borderRadius: 10,
-              fontSize: 12, 
+              fontSize: 14, 
               margin:'0px 10px',
               display:{ 
                 xs:'none', lg:'inline-block', 

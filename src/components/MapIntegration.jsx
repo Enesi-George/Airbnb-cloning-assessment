@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
   button:{
     backgroundColor:'black',
     position:'fixed',
-    margin:'0 45%',
     bottom:45,
     color:'white',
     fontSize:12,
@@ -37,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   map: {
     width: '100%',
-    height: '400px',
+    height: '500px',
   },
 }));
 
@@ -54,7 +53,7 @@ const MapIntegrationButton = () => {
   };
 
   return (
-    <div>
+    <div style={{width:'100%',display:'flex', justifyContent:'center'}}>
       <Button variant="contained" className={classes.button} onClick={handleOpenModal}>
         Site map 
         <Map sx={{fontSize: 15,}}/>

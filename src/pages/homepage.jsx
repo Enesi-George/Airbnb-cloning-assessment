@@ -9,7 +9,7 @@ import MapIntegrationButton from '../components/MapIntegration';
 const Home = () => {
   return (
       
-    <Box maxWidth="lg" p={0} sx={{padding:'0px',postion:'relative'}}>
+    <Box maxWidth="lg" p={0} sx={{padding:'0px', margin:'0 auto'}}>
     <ResponsiveAppBar/>
     <IconList/>
     <CardList/>

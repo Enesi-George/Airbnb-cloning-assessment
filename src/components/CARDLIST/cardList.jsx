@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
   card: {
     height: 330,
-    padding:'0',
+    padding:'12px 0px',
     display: 'flex',
     flexDirection: 'column',
     borderRadius:'10px',
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top:'50%',
     left:'50%',
-    transform: 'translate(110%, -450%)',
+    transform: 'translate(150%, -450%)',
     zIndex: 1,
     cursor:'pointer'
   },
@@ -124,9 +124,8 @@ const CardList = () => {
     : 4; // Fallback to 4 for desktop devices
 
   return (
-    <Box style={{marginTop:150, padding:0}}>
-      <Container maxWidth="lg">
-      <Box mt={2} mb={4} style={{padding:'0px 24px'}}>
+    <Box maxWidth="lg" style={{marginTop:150, padding:0}}>
+      <Box mt={2} mb={4} style={{padding:'0px'}}>
         <Grid container spacing={2}>
           {Array.from({ length: 20 }).map((_, index) => (
             <Grid key={index} item xs={12} sm={6} md={3}>
@@ -171,7 +170,7 @@ const CardList = () => {
                         
                         <Typography className={classes.typography} 
                         style={{
-                          margin:'0px 0px 0px 76px',
+                          margin:'0px 0px 0px 130px',
                           }} >
                            <StarRate sx={{fontSize:'11px'}}/>
                            {houseDetail.rate}
@@ -197,7 +196,7 @@ const CardList = () => {
           ))}
         </Grid>
       </Box>
-      </Container>
+     
 
     </Box>
   );
