@@ -169,7 +169,7 @@ const ResponsiveAppBar = () => {
                   color: 'black', 
                   display: 'flex',
                   justifyContent:'center',
-                  m: 1,
+                  marginRight:'-140px',
                   px:4,
                   borderRadius: '40px',
                   boxShadow:'0.1px 0.5px 2px gray',
