@@ -14,7 +14,9 @@ import {AccountCircle, HorizontalSplit, Language, SearchOutlined } from '@mui/ic
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAirbnb } from '@fortawesome/free-brands-svg-icons';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Container } from '@material-ui/core';
+import { AppBar, Container } from '@material-ui/core';
+import Toolbar from '@mui/material/Toolbar';
+
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -70,9 +72,8 @@ const ResponsiveAppBar = () => {
 
   return (
     <div>
-      <AppBar position="fixed" className={`${classes.appBar} ${classes.topBar}`}>
-        <Container maxWidth="lg">
-        <Toolbar >
+      <AppBar position="fixed" className={`${classes.appBar} ${classes.topBar}`}>      
+        <Toolbar style={{margin:"0px", padding:'10px 45px'}} >
    
           <Typography sx={{display: { xs: 'none', md: 'flex' }, mr: 1, ml:0}}>
           <FontAwesomeIcon icon={faAirbnb} style={{ fontSize: 30, color:'#FF5A5F'}} />          
@@ -104,6 +105,7 @@ const ResponsiveAppBar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color= 'text.primary'
+              sx={{padding:'0px!important'}}
             >
               <MenuIcon />
             </IconButton>
@@ -166,9 +168,9 @@ const ResponsiveAppBar = () => {
                 sx={{ 
                   color: 'black', 
                   display: 'flex',
-                  justifyContent:'center',              
+                  justifyContent:'center',
                   m: 1,
-                  px:1,
+                  px:4,
                   borderRadius: '40px',
                   boxShadow:'0.1px 0.5px 2px gray',
                   
@@ -191,7 +193,7 @@ const ResponsiveAppBar = () => {
                   color:'text.primary', 
                   fontSize: 14, 
                   padding:'0px 10px', 
-                  margin:'9px 0px',
+                  margin:'10px 0px',
                   ":hover": { backgroundColor:'transparent' }                
                   }}>
                     Any week
@@ -209,9 +211,9 @@ const ResponsiveAppBar = () => {
                 sx={{
                   display: 'flex',
                   justifyContent: 'center',
-                  margin:'7px -3px 0px 0px',
-                  width: '25px',
-                  height: '24px',
+                  margin:'6px -26px 0px 15px',
+                  width: '33px',
+                  height: '32px',
                   borderRadius:'51%',
                   bgcolor:' #FF5A5F',
                   ":hover": { backgroundColor:'#ff7a7e' }
@@ -221,7 +223,8 @@ const ResponsiveAppBar = () => {
                 <SearchOutlined               
                 sx={{
                   color: 'white',
-                  fontSize:15,           
+                  fontSize:20,
+                             
                 }}/>                
                 </IconButton>
 
@@ -261,7 +264,7 @@ const ResponsiveAppBar = () => {
                }}
             >
             <HorizontalSplit sx={{ fontSize: 25, color:"text.disabled", display:{xs:'none', sm:'block'} }}/>
-            <Badge color="error" variant="dot"  p={0}>
+            <Badge color="error" variant="dot"  p='0 '>
 
               <AccountCircle  sx={{ fontSize: 25, color:"text.disabled", m:0 }}/>
             </Badge>
@@ -291,8 +294,7 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-        </Toolbar>
-        </Container>
+        </Toolbar>     
       </AppBar>
 
 

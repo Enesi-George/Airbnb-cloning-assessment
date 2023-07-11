@@ -13,19 +13,19 @@ const useStyles = makeStyles((theme) => ({
   button:{
     backgroundColor:'black',
     position:'fixed',
-    bottom:45,
+    bottom:55,
     color:'white',
-    fontSize:12,
+    fontSize:14,
     fontWeight: 400,
     borderRadius: 20,
-    px:2,
-    width:'120px',
+    padding:'15px 40px',
     zIndex:1,
     textTransform: 'capitalize',
-    transition: '0.23',
-    ':hover':{
-      backgroundColor:'grey',
-    }
+    transition: '0.3s',
+    '&:hover': {
+      background: "black",
+      opacity:0.9
+   },
   },
   modalContent: {
     backgroundColor: theme.palette.background.paper,

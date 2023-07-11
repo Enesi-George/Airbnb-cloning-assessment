@@ -85,17 +85,15 @@ const IconList = () => {
 
   return (
     <AppBar style={{
-      marginTop:65,
+      marginTop:50,
       backgroundColor: 'white',
       boxShadow:'none',
-      paddingTop: 10,
     }}>
-      <Container maxWidth="100%" sx={{backgroundColor:'#fff', padding:'0px 80px!important'}}>
+      <Container maxWidth="100%" sx={{backgroundColor:'#fff', margin:'70px 0px 10px 0px', padding:'0px!important'}}>
       <Box style={{ 
         display: 'flex', 
         alignItems: 'center',
-        padding:'0px', 
-        margin:'0px 0px' 
+        padding:'0px 40px', 
         }}>
         {showLeftButton && (
           <Tooltip title="Back">
@@ -129,7 +127,7 @@ const IconList = () => {
               <Box ref={index === currentIndex ? iconRef : null} sx={{display:'flex', justifyContent:'center', color:'text.secondary'}}>
                 <FontAwesomeIcon icon={icon.icon} size="1x" />
               </Box>
-              <Typography sx={{fontSize: 14, fontWeight:'450', py:1, color:'text.secondary'}} >{icon.name}</Typography>
+              <Typography sx={{fontSize: 13, fontWeight:'450', py:1, color:'text.secondary'}} >{icon.name}</Typography>
             </Link>
           ))}
         </Box>
@@ -150,13 +148,11 @@ const IconList = () => {
         )}       
           <IconButton 
           sx={{ 
-            mx:'auto',     
-            px:1,
             py:'12px',
             borderRadius: '10px',
             border: '1px solid #D3D3D3'}}>
             <Insights sx={{fontSize:14, color:'black'}}/>
-            <Typography sx={{fontSize:13, color:'text.primary',px:1, fontWeight:'bold'}}>Filters</Typography>
+            <Typography sx={{fontSize:13, color:'text.primary', px:1, fontWeight:'bold'}}>Filters</Typography>
           </IconButton>
      
       </Box>

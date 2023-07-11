@@ -8,15 +8,13 @@ import image1 from '../../assets/1.jpg';
 import image2 from '../../assets/2.jpg';
 import image3 from '../../assets/3.jpg';
 import image4 from '../../assets/4.jpg';
+import { Container,   Typography,
+  Box, Grid, Card,   CardContent,
+  CardMedia } from '@mui/material';
+
 import {
-  Card,
-  CardContent,
-  Typography,
-  Grid,
   useMediaQuery,
-  useTheme,
-  Container,
-  Box,
+  useTheme, 
 } from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
 import { StarRate } from '@mui/icons-material';
@@ -24,32 +22,25 @@ import { StarRate } from '@mui/icons-material';
 const useStyles = makeStyles((theme) => ({
 
   card: {
-    height: 330,
-    padding:'12px 0px',
+    height: 400,
     display: 'flex',
     flexDirection: 'column',
     borderRadius:'10px',
-    boxShadow:'none',
+    boxShadow:'none!important',
     position: 'relative',
   },
   img:{
-    width: '100%',
-    height: 250,
-    position: 'relative',
-
-
+    height: 280,
   },
 
   cardContent: {
     flexGrow: 1,
-    padding:0,
+    padding:'0!important',
     position: 'relative',
-    width: '100%'
   },
   carousel:{
     position: 'relative',
-    height: 220,
-    width: '100%',
+    height: 280,
     padding:0,
     borderRadius:'10px',
   },
@@ -57,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top:'50%',
     left:'50%',
-    transform: 'translate(150%, -450%)',
+    transform: 'translate(160%, -500%)',
     zIndex: 1,
     cursor:'pointer'
   },
@@ -103,7 +94,7 @@ const houseDescription=[
         name:'5 Bedroom Dulex in Ajah', 
         host:'Hosted by George',
         date : 'July 10 - 12',
-        cost: '$79',
+        cost: '$291',
         rate: '5.0'
     }
 ]
@@ -124,11 +115,20 @@ const CardList = () => {
     : 4; // Fallback to 4 for desktop devices
 
   return (
-    <Box maxWidth="lg" style={{marginTop:150, padding:0}}>
-      <Box mt={2} mb={4} style={{padding:'0px'}}>
-        <Grid container spacing={2}>
+      <Container maxWidth="100%" 
+      style={{
+        padding:'45px',
+        marginTop:'90px',
+        }}>
+          
+        <Grid container spacing={3}>
           {Array.from({ length: 20 }).map((_, index) => (
-            <Grid key={index} item xs={12} sm={6} md={3}>
+            <Grid key={index} item xs={12} sm={6} md={3} sx={{}}>
+              <Box style={{
+                padding:0,
+                margin:0,
+                position:'relative'
+              }}>
               <Card className={classes.card}>
                 <CardContent className={classes.cardContent}>
 
@@ -158,33 +158,22 @@ const CardList = () => {
                   </Carousel>
                   {
                     houseDescription.map((houseDetail, houseIndex) => (
-                        <Box key={houseIndex}
-                        style={{marginTop:'10px'}}>
+                        <Box key={houseIndex} sx={{paddingTop:'10px'}}>
 
-                        <Typography className={classes.typography} 
-                        style={{
-                          display:'flex', 
-                          justifyContent:'start', 
-                          width:'100%',}}>
-                            <b>  {houseDetail.name}</b>
-                        
-                        <Typography className={classes.typography} 
-                        style={{
-                          margin:'0px 0px 0px 130px',
-                          }} >
-                           <StarRate sx={{fontSize:'11px'}}/>
-                           {houseDetail.rate}
-                           
-                           </Typography>
-                        
-                        </Typography>
+                          <Box>
+                          <Typography sx={{float:'left', fontWeight:'500', fontSize:'15px'}}>{houseDetail.name}</Typography>
+                          <Typography sx={{float:'right'}}> <StarRate fontSize='14px'/> {houseDetail.rate}</Typography>
+                          </Box>
+                          <Box sx={{width:'50%'}}>
+                          <Typography sx={{ fontSize:'15px', color:'text.secondary'}}>{houseDetail.host}</Typography>
 
-                        <Typography className={classes.typography}>{houseDetail.host}
-                        </Typography>
+                          </Box>
+                          <Typography sx={{ fontSize:'15px', color:'text.secondary'}}>{houseDetail.date}</Typography>
 
-                        <Typography className={classes.typography}>{houseDetail.date}</Typography>
-                        <Typography className={classes.typography}> <b>{houseDetail.cost}</b> night</Typography>
-
+                            <Typography>
+                            <span style={{fontWeight:'500', fontSize:'15px'}}>{houseDetail.cost} </span>
+                            <span style={{fontWeight:'100px', fontSize:'15px'}}> night</span> 
+                            </Typography>                           
                         </Box>
 
                     ))
@@ -192,13 +181,12 @@ const CardList = () => {
                   
                 </CardContent>
               </Card>
+              </Box>
+
             </Grid>
           ))}
         </Grid>
-      </Box>
-     
-
-    </Box>
+      </Container>
   );
 };
 

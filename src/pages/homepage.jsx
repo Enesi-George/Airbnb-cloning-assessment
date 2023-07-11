@@ -7,9 +7,8 @@ import CardList from '../components/CARDLIST/cardList';
 import MapIntegrationButton from '../components/MapIntegration';
 
 const Home = () => {
-  return (
-      
-    <Box maxWidth="lg" p={0} sx={{padding:'0px', margin:'0 auto'}}>
+  return (  
+    <Box>
     <ResponsiveAppBar/>
     <IconList/>
     <CardList/>
